@@ -21,16 +21,9 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Syntax check (py_compile)
+      - name: Syntax check (compileall)
         run: |
-          python -m py_compile \
-            server.py \
-            agent.py \
-            guard_llm.py \
-            memory_store.py \
-            toxic_match.py \
-            user_profile.py \
-            rag.py \
-            logger_util.py \
-            build_toxic_db.py
+          # 自動編譯當前目錄與子目錄下的所有 .py 檔案
+          # -q 代表安靜模式（成功不講話，失敗才報錯）
+          python -m compileall -q .
 
