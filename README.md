@@ -33,6 +33,14 @@
 pip install -r requirements.txt
 ```
 
+## 執行測試（CI 同步）
+
+本專案的單元測試不需要 Ollama，可在本機快速跑（也會在 GitHub Actions CI 自動跑）：
+
+```bash
+python -m pytest -q
+```
+
 ## 啟動 API
 
 ```bash

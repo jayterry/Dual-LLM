@@ -27,3 +27,7 @@ jobs:
           # -q 代表安靜模式（成功不講話，失敗才報錯）
           python -m compileall -q .
 
+      - name: Unit tests (pytest)
+        run: |
+          pytest -q
+
