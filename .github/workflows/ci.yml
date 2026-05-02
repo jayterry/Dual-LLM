@@ -29,5 +29,5 @@ jobs:
 
       - name: Unit tests (pytest)
         run: |
-          pytest -q
+          PYTHONPATH=. pytest -q
 
